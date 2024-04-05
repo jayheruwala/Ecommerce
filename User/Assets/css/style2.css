@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'rubik',sans-serif;
+    box-sizing: border-box;
+}
+header
+{
+    background-color: #ed1d24;
+}
+body
+{
+    background: #f4f4f4;
+}
+main .product_container
+{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+main .product_container .product
+{
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    /* border: 1px solid black; */
+}
+.product_container .product .product_img
+{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.product .product_img img
+{
+    width: 80%;
+    object-fit: contain;
+    cursor: pointer;
+    mix-blend-mode: multiply;
+    transform: scale(1);
+    transition: transform .5s ease-in-out;
+}
+.product .product_img img:hover
+{
+    transform: scale(1.04);
+}
+.product .product_detail
+{
+    width: 65%;
+    padding: 20px 15px;
+}
+.product .product_detail .product_name
+{
+    display: flex;
+    flex-direction: column;
+}
+.product_detail .product_name .brand_name
+{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    color: #242323;
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.product_detail .product_name .brand_name
+{
+    text-transform: capitalize;
+    transition: color 0.5s ease-in;
+    color: #242323;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    margin: top 10px;
+}
+.product_detail .product_name .product_name:hover
+{
+    color: #ed1d24;
+}
+.product_detail .product_price p
+{
+    margin: 10px 0 20px 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: #ee060e;
+}
+.product_detail .product_price del
+{
+    color: #666;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.product_detail .product_det
+{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.product_det .box
+{
+    border:1px solid rgb(124,124,124);
+    padding: 7px 10px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    word-wrap: normal;
+}
+.product_detail .product_buttons
+{
+    margin: 15px 0;
+}
+.product_detail .product_buttons .count_bnt button
+{
+    margin: 0;
+    height: 40px;
+    width: 45px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #666;
+    background-color: white;
+    cursor: pointer;
+}
+.product_detail .product_buttons .count_bnt input[type="text"]
+{
+    width: 70px;
+    height: 40px;
+    margin: 0 -4px;
+    border: 1px solid #666;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
+.product_detail .product_buttons .count_bnt input[type="text"]:focus
+{
+    outline: none;
+}
+.cert_bn2{
+    /* margin: 10px; */
+    height: 40px;
+    width: 160px;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    color: white;
+    font-weight: 400;
+    opacity: 0.9;
+    background-color: #ed1d24;
+    border: none;
+    cursor: pointer;
+}
+.product_detail .product_buttons .cert_btn
+{
+    /* margin: 10px; */
+    height: 40px;
+    width: 160px;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    color: white;
+    font-weight: 400;
+    opacity: 0.9;
+    background-color: #ed1d24;
+    border: none;
+    cursor: pointer;
+}
+
+.cert_x{
+    height: 40px;
+    width: 160px;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    color: white;
+    font-weight: 400;
+    opacity: 0.9;
+    background-color: #ed1d24;
+    border: none;
+    cursor: pointer;
+}

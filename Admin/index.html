@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+</head>
+
+<style>
+    *{
+        font-family: 'Rubik';
+    }
+    .container {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .deshboard {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        margin-top: 30px;
+        min-width: 23%;
+        max-width: 30%;
+        background-color: white;
+        box-shadow: rgba(224, 224, 224, 0.8) 0 0 10px 1px;
+        padding: 15px 20px;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+    .cardblock{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+    .icon{
+        background-color: orange;
+        min-width: 70px;
+        max-width: 80px;
+        height: 80px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -40px;
+        border-radius: 12px;
+        transition: all .5s ease-in;
+
+    }
+    .card:hover .icon{
+        top: 0;
+    }
+    .icon  i{
+        font-size: 40px;
+        color: white;
+        font-weight: 600;
+    }
+    .detail{
+        font-size: 18px;
+        color: #666;
+    }
+    .number{
+        margin-top: 4px;
+        color: black;
+        opacity: 1;
+        font-size: 22px;
+    }
+
+    .another::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color:  rgb(216, 216, 216);
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="deshboard">
+            <div class="card">
+                <div class="cardblock">
+                    <div class="icon">
+                        <i class="bi-person"></i>
+                    </div>
+                    <div class="detail">
+                        Total Customer <br>
+                        <p class="number">1000</p>
+                    </div>
+                </div>
+                <div class="another">
+                    <a href="">Customer</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardblock">
+                    <div class="icon">
+                        <i class="bi-box-seam"></i>
+                    </div>
+                    <div class="detail">
+                        Total Orders <br>
+                        <p class="number">1000</p>
+
+                    </div>
+                </div>
+                <div class="another">
+                    <a href="">Orders</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardblock">
+                    <div class="icon">
+                        <i class="bi-box-seam"></i>
+                    </div>
+                    <div class="detail">
+                        Total Orders <br>
+                        <p class="number">1000</p>
+
+                    </div>
+                </div>
+                <div class="another">
+                    <a href="">Orders</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardblock">
+                    <div class="icon">
+                        <i class="bi-box-seam"></i>
+                    </div>
+                    <div class="detail">
+                        Total Orders <br>
+                        <p class="number">1000</p>
+
+                    </div>
+                </div>
+                <div class="another">
+                    <a href="">Orders</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

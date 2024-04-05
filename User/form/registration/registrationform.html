@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/relese/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="Assets/css/registrationform.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Registration
+        </div>
+        <form name="Form" onsubmit="return validateForm()" action="registrationform.php" method="POST">
+            <div class="field name">
+                <div class="input-area">
+                    <input type="text" name="name" id="name" placeholder="Enter Name" onclick="checkname()">
+                    <i class="uil uil-uesr bi-person"></i>
+                </div>
+                <div class="error" id="nameErr"></div>
+            </div>
+            <div class="field email">
+                <div class="input-area">
+                    <input type="text" name="email" id="email" placeholder="Enter Email Id" onclick="checkemail()">
+                    <i class="uil uil-envelope bi-envelope"></i>
+                </div>
+                <div class="error" id="emailErr"></div>
+            </div>
+            <div class="field mobile">
+                <div class="input-area">
+                    <input type="text" name="mobile" id="" placeholder="Enter mobile No" onclick="checkmobile()">
+                    <i class="uil uil-phone bi-phone" ></i>
+                </div>
+                <div class="error" id="mobileErr"></div>
+            </div>
+            <div class="field address">
+                <div class="input-area">
+                    <input type="text" name="address" id="" placeholder="Enter Your Address" onclick="checkaddress()">
+                    <i class="uil uil-map-pin bi-textarea"></i>
+                </div>
+                <div class="error" id="addressErr"></div>
+            </div>
+            <div class="field city">
+                <div class="input-area">
+                    <input type="text" name="city" id="" placeholder="Enter Your city" onclick="checkcity()">
+                    <i class="uil uil-map bi-map"></i>
+                </div>
+                <div class="error" id="cityErr"></div>
+            </div>
+            <div class="field pin_code">
+                <div class="input-area">
+                    <input type="text" name="pin_code" id="" placeholder="Enter Your pin_code"
+                        onclick="checkpin_code()">
+                    <i class="uil uil-map-pin bi-bookmark-check-fill"></i>
+                </div>
+                <div class="error" id="pin_codeErr"></div>
+            </div>
+
+            <div class="field password">
+                <div class="input-area">
+                    <input type="password" name="password" id="" placeholder="Enter password" onclick="checkpassword()">
+                    <i class="uil uil-lock bi-lock "></i>
+                </div>
+                <div class="error" id="passwordErr"></div>
+            </div>
+            <div class="field Cpassword">
+                <div class="input-area">
+                    <input type="password" name="cpassword" id="" placeholder="Enter confirm password"
+                        onclick="checkcpassword()">
+                    <i class="uil uil-lock bi-lock"></i>
+                </div>
+                <div class="error" id="cpasswordErr"></div>
+            </div>
+            <input type="submit" value="Submit" name="Submit">
+        </form>
+    </div>
+    <script src="Assets/js/registration.js"></script>
+
+</body>
+
+</html>

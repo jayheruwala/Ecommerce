@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="Assets/category.css"> -->
+</head>
+<body>
+    <div class="wrapper">
+        <form onsubmit="return validateCategory()" action="category.php" method="post" enctype="multipart/form-data">
+            <header>Login</header>
+            <div class="field name">
+                <div class="input-area">
+                    <input type="text" name="name" id="name" class="input" placeholder="Category name" onclick="removeName()">
+                </div>
+                <div class="error" id="nameErr"></div>
+            </div>
+           
+                
+                    <input type="file" name="image" id="image">
+               
+                <div class="error" id="imageErr"></div>
+           
+            <input type="submit" name="Submit" value="Add category">
+        </form>
+    </div>
+    <!-- <script src="Assets/category.js"></script> -->
+    
+</body>
+</html>

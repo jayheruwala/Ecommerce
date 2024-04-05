@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    font-family: 'rubik';
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f4f4;
+}
+.past_orders{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.past_orders .title{
+    margin-bottom: 10px;
+}
+.past_orders .title h2{
+    font-size: 25px;
+    opacity: 0.9;
+}
+.order_block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.order{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    border: 1px solid #ECEBE9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.order .image{
+    min-width: 25%;
+    max-width: 25%;
+    border: 1px solid #ECEBE9;
+    border-radius: 10px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img{
+    max-width:90%;
+    min-height: 90%;
+mix-blend-mode: multiply;
+object-fit: contain;
+}
+.order .desc{
+width: 70%;
+padding: 15px 0;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+
+.desc .top{
+display: flex;
+justify-content: space-between;
+}
+
+.desc .details{
+    display: flex;
+    align-items: center;
+}
+.desc .product_title{
+    font-size: 22px;
+    font-weight: 500;
+}
+.details p{
+    color: black;
+}
+p{
+    margin: 0;
+}
+.details{
+    font-weight: 500;
+    color: black;
+    opacity: 1.1;
+    letter-spacing: 0.4px;
+    display: flex;
+    align-items: center;
+}
+
+.details .det_tit{
+    font-weight: 500;
+    color: black;
+    opacity: 0.9;
+}
+
+.button button{
+    padding: 10px 15px;
+    background-color: #c71016;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transform-origin: left;
+    transition: background-color 1s ease;
+    letter-spacing: .3px;
+}
+
+.button button:hover{
+    background-color: #ed1d24;
+    
+}

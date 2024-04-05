@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Admin Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!--===============================================================================================-->
+</head>
+<style>
+
+	@font-face {
+		font-display: block;
+		font-family: "bootstrap-icons";
+		src: url("../bootstrap-icons/fonts/bootstrap-icons.woff2?2820a3852bdb9a5832199cc61cec4e65") format("woff2"),
+			url("../bootstrap-icons/fonts/bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("woff");
+	}
+
+	.wrap-login {
+		width: 700px;
+		background: #fff;
+		border-radius: 10px;
+		position: relative;
+	}
+
+	.wrap-inputX {
+		font-family: Poppins-Regular;
+		color: #333333;
+		line-height: 1.2;
+		font-size: 18px;
+		display: block;
+		width: 100%;
+		background: transparent;
+		height: 60px;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		background-color: #f7f7f7;
+		border: 1px solid #e6e6e6;
+	}
+
+	.ErrorFor {
+		color: red;
+		margin-bottom: 10px;
+		text-align: center;
+
+	}
+
+
+	.flex {
+		display: flex;
+		gap: 10px;
+	}
+
+	.flexContainer {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	input[type=file] {
+		height: 30px;
+		cursor: pointer;
+	}
+
+	input[type=number]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+
+	input[type=file]::-webkit-file-upload-button {
+		display: none;
+	}
+
+	input[type=file]::before {
+		content: "\f226";
+		color: black;
+		font-family: bootstrap-icons;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		font-size: 23px;
+		margin-right: 10px;
+		position: relative;
+		top: 5px;
+	}
+
+	.focus-input {
+		border: 1px solid #5047C7;
+	}
+
+	.btn::before {
+		background: rgb(199, 255, 218);
+		background: linear-gradient(163deg, rgba(199, 255, 218, 1) 9%, rgba(101, 87, 164, 1) 59%);
+	}
+</style>
+
+<body>
+
+	<div class="limiter">
+		<div class="container-login" style="background-image: url('images/cool-background\ \(1\).png');">
+			<div class="wrap-login ">
+				<form onsubmit="return validate()" method="POST" action="register.php" class="login-form validate-form " enctype="multipart/form-data">
+
+					<div class="flex">
+						<div class="flexContainer">
+
+							<div class="">
+								<span class="txt1">
+									First Name
+								</span>
+							</div>
+							<div class="wrap-input validate-input" >
+								<input class="input" type="text" name="fname" required inputmode="">
+								<span class="focus-input"></span>
+							</div>
+						</div>
+						<div class="flexContainer">
+
+							<div class="">
+								<span class="txt1">
+									Last Name
+								</span>
+							</div>
+							<div class="wrap-input validate-input" >
+								<input class="input" type="text" name="lname" required inputmode="">
+								<span class="focus-input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flexContainer">
+							<div class="">
+								<span class="txt1">
+									Email
+								</span>
+							</div>
+							<div class="wrap-input validate-input" >
+								<input class="input" type="email" name="email" required inputmode="email">
+								<span class="focus-input"></span>
+							</div>
+						</div>
+						<div class="flexContainer">
+							<div class="">
+								<span class="txt1">
+									Mobile No
+								</span>
+							</div>
+							<div class="wrap-input validate-input" >
+								<input class="input" type="text" maxlength="10" minlength="10" name="mobile"
+									inputmode="numeric" required pattern="\d{10}">
+								<span class="focus-input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flexContainer">
+							<div class="">
+								<span class="txt1">
+									Position
+								</span>
+							</div>
+							<div class="wrap-input validate-input">
+								<!-- <input class="input" type="password" name="pass" id="pss" required> -->
+								<select name="position" id="" class="input" style="outline: none; border: none;" required>
+									<option value=""></option>
+									<option value="Admin">Admin</option>
+									<option value="Owner">Owner</option>
+								</select>
+								<span class="focus-input"></span>
+							</div>
+						</div>
+						<div class="flexContainer">
+							<div class="">
+								<span class="txt1">
+									Profile Image
+								</span>
+							</div>
+							<div class="wrap-input wrap-inputX validate-input" data-validate="Email is required">
+								<input class="input" type="file" name="image" required accept=".jpg,.pdf">
+								<span class="focus-input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="flexContainer">
+							<div class="">
+								<span class="txt1">
+									Password
+								</span>
+							</div>
+							<div class="wrap-input validate-input" data-validate="Password is required">
+								<input class="input" type="password" name="pass" id="pss" required>
+								<span class="focus-input"></span>
+							</div>
+						</div>
+						<div class="flexContainer">
+							<div class="">
+								<span class="txt1">
+									Confirm Password
+								</span>
+							</div>
+							<div class="wrap-input validate-input" data-validate="Password is required">
+								<input class="input" type="password" name="cpass" id="cpss" required>
+								<span class="focus-input"></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="ErrorFor" id="ErrorFor">
+						
+					</div>
+
+					<div class="form-btn ">
+					    <button class="btn" type="submit" name="sign_in">
+							Sign In
+						</button> 
+						<!-- <input type="button" value="Sign in" class="btn"> -->
+					</div>
+
+					<div class="" style="text-align: center; margin-top: 5px;">
+						<span class="txt2">
+							Already a member?
+						</span>
+
+						<a href="index.php" class="txt2 bo1">
+							Sign up now
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function validate(){
+			var pas = document.getElementById("pss").value;
+			var cpas = document.getElementById("cpss").value;
+
+			if(pas != cpas){
+				document.getElementById("ErrorFor").innerText = "Password and Confirm passwod must be same";
+				return false;
+			}
+		}
+	</script>
+
+</body>
+
+</html>
